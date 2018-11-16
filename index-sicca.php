@@ -10,34 +10,14 @@
 <body>
     <div id="container">
         <h1>Table de Multiplication</h1>
-
-        
-
-        <select class="monselect" name="choixTable">
-            <?php selected(); ?>
-        </select>
-
-
-
         <form name="table" action="index-sicca.php" method="get">
           <fieldset>
             <legend>Choix</legend>
             <label for='nom'>Tables</label>
-
-            
-
             <select name="monselect">
-            <option value="1">Table de 1</option>
-            <option value="2">Table de 2</option>
-            <option value="3">Table de 3</option>
-            <option value="4">Table de 4</option>
-            <option value="5">Table de 5</option>
-            <option value="6">Table de 6</option>
-            <option value="7">Table de 7</option>
-            <option value="8">Table de 8</option>
-            <option value="9">Table de 9</option>
-            <option value="10">Table de 10</option>
-        </select>
+            <option value="0">Tables de Multiplications</option>
+                <?php selected(); ?>
+            </select>
 
         </fieldset>
             <?php
@@ -46,12 +26,14 @@
                     $table = 0;
                     $result;
 
-                    echo '<h2>' . 'Table de ' . $table . '</h2>';
+                    
 
                     for ($i=0; $i <= 10; $i++)
                     { 
+                        
                         $table = $table+1;
-                        echo '<div id="ma_div_'.$table.'" class="containTable" class="mes_divs" style="display:none">';
+                        echo '<div id="ma_div_'.$table.'" class="mes_divs" style="display:none">';
+                        
 
                         // Générer les résultats selon le choix puis les afficher
                          for ($j=0; $j <= 30; $j++)
